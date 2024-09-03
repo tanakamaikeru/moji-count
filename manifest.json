@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Character Counter",
+    "version": "1.0",
+    "description": "Counts the number of characters in the selected text and displays it on the screen.",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ],
+    "icons": {}
+}
